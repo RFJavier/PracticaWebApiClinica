@@ -1,0 +1,47 @@
+﻿@model ClinicaWeb.EntidadesDeNegocio.Horarios
+
+@{
+    ViewData["Title"] = "Detalles del Horario";
+}
+
+<h1>Detalles del Horario</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdMedico)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Medico.Nombre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdMedico)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Medico.Especialidad)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Entrada)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Entrada)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Salida)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Salida)
+        </dd>
+
+    </dl>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            @Html.ActionLink("Modificar registro", "Edit",
+           new { id = Model.Id }, new { @class = "btn btn-success" }) |
+            <a asp-action="Index" class="btn btn-dark">Regresar a la Lista</a>
+        </div>
+    </div>
+</div>

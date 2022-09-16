@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>ClinicaWeb.AccesoADatos</id>
+    <version>1.0.0</version>
+    <authors>ClinicaWeb.AccesoADatos</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="ClinicaWeb.EntidadesDeNegocio" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore.SqlServer" version="5.0.14" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Javier Rivera\OneDrive\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\bin\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.dll" target="lib\netcoreapp3.1\ClinicaWeb.AccesoADatos.dll" />
+  </files>
+</package>

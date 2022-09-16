@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30711.63
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicaWeb.UI.AppWebAspCore", "ClinicaWeb.UI.AppWebAspCore\ClinicaWeb.UI.AppWebAspCore.csproj", "{789B5334-1807-408E-B188-6E5942C7EFFC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicaWeb.AccesoADatos", "ClinicaWeb.AccesoADatos\ClinicaWeb.AccesoADatos.csproj", "{E72E1CEA-1042-4028-8850-48B2CE956AF5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicaWeb.LogicaDeNegocio", "ClinicaWeb.LogicaDeNegocio\ClinicaWeb.LogicaDeNegocio.csproj", "{3B8B92AA-0237-45D9-9B96-24FE5E0A2892}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicaWeb.EntidadesDeNegocio", "ClinicaWeb.EntidadesDeNegocio\ClinicaWeb.EntidadesDeNegocio.csproj", "{45BCAFBA-00A9-4BA2-B61B-77A35DF2452E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicaWebApi", "ClinicaWebApi\ClinicaWebApi.csproj", "{21CA041A-825C-4BC0-8C83-21CD659757A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebasClinica", "PruebasClinica\PruebasClinica.csproj", "{B36FBBF8-D6CA-4942-99B5-DC29EB2B0AB0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{789B5334-1807-408E-B188-6E5942C7EFFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{789B5334-1807-408E-B188-6E5942C7EFFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{789B5334-1807-408E-B188-6E5942C7EFFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{789B5334-1807-408E-B188-6E5942C7EFFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E72E1CEA-1042-4028-8850-48B2CE956AF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E72E1CEA-1042-4028-8850-48B2CE956AF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E72E1CEA-1042-4028-8850-48B2CE956AF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E72E1CEA-1042-4028-8850-48B2CE956AF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B8B92AA-0237-45D9-9B96-24FE5E0A2892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B8B92AA-0237-45D9-9B96-24FE5E0A2892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B8B92AA-0237-45D9-9B96-24FE5E0A2892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B8B92AA-0237-45D9-9B96-24FE5E0A2892}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45BCAFBA-00A9-4BA2-B61B-77A35DF2452E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45BCAFBA-00A9-4BA2-B61B-77A35DF2452E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45BCAFBA-00A9-4BA2-B61B-77A35DF2452E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45BCAFBA-00A9-4BA2-B61B-77A35DF2452E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21CA041A-825C-4BC0-8C83-21CD659757A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21CA041A-825C-4BC0-8C83-21CD659757A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21CA041A-825C-4BC0-8C83-21CD659757A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21CA041A-825C-4BC0-8C83-21CD659757A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B36FBBF8-D6CA-4942-99B5-DC29EB2B0AB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B36FBBF8-D6CA-4942-99B5-DC29EB2B0AB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B36FBBF8-D6CA-4942-99B5-DC29EB2B0AB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B36FBBF8-D6CA-4942-99B5-DC29EB2B0AB0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE43B8E2-409B-435D-9B4E-5282D4BD7E2E}
+	EndGlobalSection
+EndGlobal

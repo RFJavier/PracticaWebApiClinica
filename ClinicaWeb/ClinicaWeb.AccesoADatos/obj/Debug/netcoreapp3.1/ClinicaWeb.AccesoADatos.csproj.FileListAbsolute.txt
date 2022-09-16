@@ -1,0 +1,55 @@
+F:\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\bin\Debug\netcoreapp3.1\ClinicaWeb.EntidadesDeNegocio.dll
+F:\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.csprojAssemblyReference.cache
+F:\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.AssemblyInfoInputs.cache
+F:\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.AssemblyInfo.cs
+C:\Users\marlo\OneDrive\Escritorio\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\bin\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.deps.json
+C:\Users\marlo\OneDrive\Escritorio\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\bin\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.dll
+C:\Users\marlo\OneDrive\Escritorio\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\bin\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.pdb
+C:\Users\marlo\OneDrive\Escritorio\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\bin\Debug\netcoreapp3.1\ClinicaWeb.EntidadesDeNegocio.dll
+C:\Users\marlo\OneDrive\Escritorio\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\bin\Debug\netcoreapp3.1\ClinicaWeb.EntidadesDeNegocio.pdb
+C:\Users\marlo\OneDrive\Escritorio\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.csproj.AssemblyReference.cache
+C:\Users\marlo\OneDrive\Escritorio\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marlo\OneDrive\Escritorio\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.AssemblyInfoInputs.cache
+C:\Users\marlo\OneDrive\Escritorio\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.AssemblyInfo.cs
+C:\Users\marlo\OneDrive\Escritorio\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.csproj.CoreCompileInputs.cache
+C:\Users\marlo\OneDrive\Escritorio\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.csproj.CopyComplete
+C:\Users\marlo\OneDrive\Escritorio\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.dll
+C:\Users\marlo\OneDrive\Escritorio\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.pdb
+E:\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\bin\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.deps.json
+E:\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\bin\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.dll
+E:\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\bin\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.pdb
+E:\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\bin\Debug\netcoreapp3.1\ClinicaWeb.EntidadesDeNegocio.dll
+E:\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\bin\Debug\netcoreapp3.1\ClinicaWeb.EntidadesDeNegocio.pdb
+E:\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.csprojAssemblyReference.cache
+E:\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.AssemblyInfoInputs.cache
+E:\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.AssemblyInfo.cs
+E:\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.csproj.CoreCompileInputs.cache
+E:\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.csproj.CopyComplete
+E:\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.dll
+E:\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.pdb
+C:\Users\Alumno\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\bin\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.deps.json
+C:\Users\Alumno\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\bin\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.dll
+C:\Users\Alumno\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\bin\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.pdb
+C:\Users\Alumno\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\bin\Debug\netcoreapp3.1\ClinicaWeb.EntidadesDeNegocio.dll
+C:\Users\Alumno\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\bin\Debug\netcoreapp3.1\ClinicaWeb.EntidadesDeNegocio.pdb
+C:\Users\Alumno\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.csproj.AssemblyReference.cache
+C:\Users\Alumno\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alumno\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.AssemblyInfoInputs.cache
+C:\Users\Alumno\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.AssemblyInfo.cs
+C:\Users\Alumno\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.csproj.CoreCompileInputs.cache
+C:\Users\Alumno\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.dll
+C:\Users\Alumno\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.pdb
+C:\Users\Alumno\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.csproj.CopyComplete
+C:\Users\Javier Rivera\OneDrive\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\bin\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.deps.json
+C:\Users\Javier Rivera\OneDrive\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\bin\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.dll
+C:\Users\Javier Rivera\OneDrive\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\bin\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.pdb
+C:\Users\Javier Rivera\OneDrive\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\bin\Debug\netcoreapp3.1\ClinicaWeb.EntidadesDeNegocio.dll
+C:\Users\Javier Rivera\OneDrive\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\bin\Debug\netcoreapp3.1\ClinicaWeb.EntidadesDeNegocio.pdb
+C:\Users\Javier Rivera\OneDrive\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.csproj.AssemblyReference.cache
+C:\Users\Javier Rivera\OneDrive\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Javier Rivera\OneDrive\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.AssemblyInfoInputs.cache
+C:\Users\Javier Rivera\OneDrive\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.AssemblyInfo.cs
+C:\Users\Javier Rivera\OneDrive\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.csproj.CoreCompileInputs.cache
+C:\Users\Javier Rivera\OneDrive\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.csproj.CopyComplete
+C:\Users\Javier Rivera\OneDrive\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.dll
+C:\Users\Javier Rivera\OneDrive\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.AccesoADatos\obj\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.pdb

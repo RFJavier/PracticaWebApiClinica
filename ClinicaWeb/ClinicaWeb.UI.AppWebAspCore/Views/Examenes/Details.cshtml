@@ -1,0 +1,29 @@
+﻿@model ClinicaWeb.EntidadesDeNegocio.Examenes
+
+@{
+    ViewData["Title"] = "Detalles del Examen";
+}
+
+<h1>Detalles del Examen</h1>
+
+<div>
+    <h4>Examenes</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Examen)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Examen)
+        </dd>
+    </dl>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            @Html.ActionLink("Modificar registro", "Edit",
+           new { id = Model.Id }, new { @class = "btn btn-success" }) |
+            <a asp-action="Index" class="btn btn-dark">Regresar a la Lista</a>
+        </div>
+    </div>
+</div>

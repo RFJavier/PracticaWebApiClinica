@@ -1,0 +1,48 @@
+﻿@model ClinicaWeb.EntidadesDeNegocio.Horarios
+
+@{
+    ViewData["Title"] = "Nuevo Horario";
+    var medico = ViewBag.Medico as List<ClinicaWeb.EntidadesDeNegocio.Medico>;
+}
+
+<h1>Nuevo Horario</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Entrada" class="control-label"></label>
+                <input asp-for="Entrada" class="form-control" />
+                <span asp-validation-for="Entrada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Salida" class="control-label"></label>
+                <input asp-for="Salida" class="form-control" />
+                <span asp-validation-for="Salida" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdMedico" class="control-label"></label>
+                <select asp-for="IdMedico" class="form-control">
+                    <option selected value="">Seleccione un valor</option>
+                    @foreach (var item in medico)
+                    {
+                        <option value="@item.Id">@item.Nombre</option>
+                    }
+                </select>
+                <span asp-validation-for="IdMedico" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Agregar" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-dark">Regresar a la Lista</a>
+            </div>
+            <span class="text-danger">@ViewBag.Error</span>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

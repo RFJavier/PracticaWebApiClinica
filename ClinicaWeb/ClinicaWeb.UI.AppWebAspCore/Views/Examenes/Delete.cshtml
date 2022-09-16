@@ -1,0 +1,27 @@
+﻿@model ClinicaWeb.EntidadesDeNegocio.Examenes
+
+@{
+    ViewData["Title"] = "Eliminar Examen Medico";
+}
+
+<h1>Eliminar Examen Medico</h1>
+
+<h3>Seguro quieres borrar esto?</h3>
+<div>
+    <h4>Examenes</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Examen)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Examen)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="@Model.Id" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-dark">Regresar a la Lista</a>
+    </form>
+</div>

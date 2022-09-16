@@ -1,0 +1,71 @@
+﻿@model ClinicaWeb.EntidadesDeNegocio.Paciente
+
+@{
+    ViewData["Title"] = "Detalles del Paciente";
+}
+
+<h1>Detalles del Paciente</h1>
+
+<div>
+
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Edad)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Edad)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Telefono)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Telefono)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FechaNacimiento)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FechaNacimiento)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Genero)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Genero)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Medico)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Medico.Nombre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Examenes)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Examenes.Examen)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Anexos)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Anexos.Anexo)
+        </dd>
+    </dl>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            @Html.ActionLink("Modificar registro", "Edit",
+           new { id = Model.Id }, new { @class = "btn btn-success" }) |
+            <a asp-action="Index" class="btn btn-dark">Regresar a la Lista</a>
+        </div>
+    </div>
+</div>

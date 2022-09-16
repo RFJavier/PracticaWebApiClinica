@@ -1,0 +1,16 @@
+﻿@model ClinicaWeb.EntidadesDeNegocio.Paciente
+
+@{
+    ViewData["Title"] = "Eliminar Datos del Paciente";
+}
+
+<h1>Eliminar Datos del Paciente</h1>
+
+<h3>Seguro quieres eliminar estos datos?</h3>
+<div>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="@Model.Id" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-dark">Regresar a la Lista</a>
+    </form>
+</div>

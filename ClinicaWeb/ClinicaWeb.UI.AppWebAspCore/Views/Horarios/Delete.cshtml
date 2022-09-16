@@ -1,0 +1,18 @@
+﻿@model ClinicaWeb.EntidadesDeNegocio.Horarios
+
+@{
+    ViewData["Title"] = "Eliminar Horario";
+}
+
+<h1>Eliminar Horario</h1>
+
+<h3>Seguro de Eliminar este Horario?</h3>
+<div>
+
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="@Model.Id" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-dark">Regresar a la Lista</a>
+    </form>
+</div>

@@ -1,0 +1,103 @@
+﻿@model IEnumerable<ClinicaWeb.EntidadesDeNegocio.Horarios>
+
+@{
+    ViewData["Title"] = "Lista de Horarios ";
+    int numPage = 1;
+    int numRegistros = 0;
+    int numRegistrosPorPage = 10;
+    int[] tops = { 10, 20, 50, 100, 500, 1000, 10000, -1 };
+    int topActual = Convert.ToInt32(ViewBag.Top);
+    List<ClinicaWeb.EntidadesDeNegocio.Medico> medico = ViewBag.Medico as List<ClinicaWeb.EntidadesDeNegocio.Medico>;
+}
+
+<h1>Lista de Horarios</h1>
+
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Index">
+            <div class="form-group">
+                <a asp-action="Create" class="btn btn-primary">Agregar Horario</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<table class="table table-responsive paginationjs">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Entrada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdMedico)
+            </th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Entrada)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Salida)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Medico.Nombre)
+                </td>
+                <td>
+                    @Html.ActionLink("Modificar", "Edit", new { id = item.Id }, new { @class = "btn btn-success" }) |
+                    @Html.ActionLink("Detalle", "Details", new { id = item.Id }, new { @class = "btn btn-info" }) |
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+            numRegistros++;
+            if (numRegistros == numRegistrosPorPage)
+            {
+                numPage++;
+                numRegistros = 0;
+            }
+        }
+
+        @{
+            if (numRegistros == 0)
+            {
+                numPage--;
+            }
+        }
+    </tbody>
+</table>
+
+@if (numPage > 1)
+{
+    <div class="row" style="overflow: auto">
+        <div class="col-md-12">
+            <ul class="pagination paginationjs" data-numpage="@numPage"
+                data-pageactive="1">
+                <li class="page-item" data-typepage="Previous">
+                    <a class="page-link" href="#">Anterior</a>
+                </li>
+                @for (var i = 1; i <= numPage; i++)
+                {
+                    <li class="page-item" data-page="@i" data-typepage="Item">
+                        <a class="page-link" href="#">@i</a>
+                    </li>
+                }
+                <li class="page-item" data-typepage="Next">
+                    <a class="page-link" href="#">Siguiente</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+}

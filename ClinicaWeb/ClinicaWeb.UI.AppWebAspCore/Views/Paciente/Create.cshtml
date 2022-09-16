@@ -1,0 +1,90 @@
+﻿@model ClinicaWeb.EntidadesDeNegocio.Paciente
+
+@{
+    ViewData["Title"] = "Nuevo Paciente";
+    var medico = ViewBag.Medico as List<ClinicaWeb.EntidadesDeNegocio.Medico>;
+    var examen = ViewBag.Examen as List<ClinicaWeb.EntidadesDeNegocio.Examenes>;
+    var anexo = ViewBag.Anexo as List<ClinicaWeb.EntidadesDeNegocio.Anexos>;
+}
+
+<h1>Nuevo Paciente</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+
+                <label asp-for="IdMedico" class="control-label"></label>
+                <select asp-for="IdMedico" class="form-control" asp-items="ViewBag.IdMedico">
+                    <option selected value="">Seleccione un valor</option>
+                    @foreach (var item in medico)
+                    {
+                        <option value="@item.Id">@item.Nombre</option>
+                    }
+                </select>
+                <span asp-validation-for="IdMedico" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="IdExamen" class="control-label"></label>
+                <select asp-for="IdExamen" class="form-control" asp-items="ViewBag.IdExamen">
+                    <option selected value="">Seleccione un valor</option>
+                    @foreach (var item in examen)
+                    {
+                        <option value="@item.Id">@item.Examen</option>
+                    }
+                </select>
+                <span asp-validation-for="IdExamen" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="IdAnexo" class="control-label"></label>
+                <select asp-for="IdAnexo" class="form-control" asp-items="ViewBag.IdAnexo">
+                    <option selected value="">Seleccione un valor</option>
+                    @foreach (var item in anexo)
+                    {
+                        <option value="@item.Id">@item.Anexo</option>
+                    }
+                </select>
+                <span asp-validation-for="IdAnexo" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Edad" class="control-label"></label>
+                <input asp-for="Edad" class="form-control" />
+                <span asp-validation-for="Edad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Telefono" class="control-label"></label>
+                <input asp-for="Telefono" class="form-control" />
+                <span asp-validation-for="Telefono" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaNacimiento" class="control-label"></label>
+                <input asp-for="FechaNacimiento" class="form-control" />
+                <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Genero" class="control-label"></label>
+                <input asp-for="Genero" class="form-control" />
+                <span asp-validation-for="Genero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Agregar" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-dark">Regresar a la Lista</a>
+            </div>
+            <span class="text-danger">@ViewBag.Error</span>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

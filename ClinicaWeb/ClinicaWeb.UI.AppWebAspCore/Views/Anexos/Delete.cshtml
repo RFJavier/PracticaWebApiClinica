@@ -1,0 +1,27 @@
+﻿@model ClinicaWeb.EntidadesDeNegocio.Anexos
+
+@{
+    ViewData["Title"] = "Eliminar Anexo Medico";
+}
+
+<h1>Eliminar Anexo Medico</h1>
+
+<h3>Quieres Borrar Este Anexo Medico</h3>
+<div>
+    <h4>Anexos</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Anexo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Anexo)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="@Model.Id" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-dark">Regresar a la Lista</a>
+    </form>
+</div>
