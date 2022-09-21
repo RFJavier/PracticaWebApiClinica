@@ -15,6 +15,7 @@ namespace ClinicaWeb.AccesoADatos
         public DbSet<Anexos> Anexos { get; set; }
         public DbSet<Horarios> Horarios { get; set; }
         public DbSet<Paciente> Paciente { get; set; }
+        public DbSet<Usuario> Usuarios { get; internal set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
