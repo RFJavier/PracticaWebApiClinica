@@ -12,7 +12,10 @@ namespace ClinicaWeb.EntidadesDeNegocio
         [Key]
         public int Id { get; set; }
 
-  
+        [ForeignKey("Rol")]
+        [Required(ErrorMessage = "Rol es obligatorio")]
+        [Display(Name = "Rol")]
+        public int IdRol { get; set; }
 
         [Required(ErrorMessage = "Nombre es obligatorio")]
         [StringLength(30, ErrorMessage = "Maximo 30 caracteres")]
@@ -37,7 +40,7 @@ namespace ClinicaWeb.EntidadesDeNegocio
         [Display(Name = "Fecha registro")]
         public DateTime FechaRegistro { get; set; }
 
-  
+        public Rol Rol { get; set; }
 
         [NotMapped]
         public int Top_Aux { get; set; }

@@ -26,7 +26,7 @@ namespace ClinicaWeb.AccesoADatos
         private static async Task<bool> ExisteLogin(Usuario pUsuario, BDContexto pDbContext)
         {
             bool result = false;
-            var loginUsuarioExiste = await pDbContext.Usuarios.FirstOrDefaultAsync(s => s.Login == pUsuario.Login && s.Id != pUsuario.Id);
+            var loginUsuarioExiste = await pDbContext.Usuario.FirstOrDefaultAsync(s => s.Login == pUsuario.Login && s.Id != pUsuario.Id);
             if (loginUsuarioExiste != null && loginUsuarioExiste.Id > 0 && loginUsuarioExiste.Login == pUsuario.Login)
                 result = true;
             return result;
@@ -59,8 +59,8 @@ namespace ClinicaWeb.AccesoADatos
                 bool existeLogin = await ExisteLogin(pUsuario, bdContexto);
                 if (existeLogin == false)
                 {
-                    var usuario = await bdContexto.Usuarios.FirstOrDefaultAsync(s => s.Id == pUsuario.Id);
-                 
+                    var usuario = await bdContexto.Usuario.FirstOrDefaultAsync(s => s.Id == pUsuario.Id);
+                    usuario.IdRol = pUsuario.IdRol;
                     usuario.Nombre = pUsuario.Nombre;
                     usuario.Apellido = pUsuario.Apellido;
                     usuario.Login = pUsuario.Login;
@@ -79,8 +79,8 @@ namespace ClinicaWeb.AccesoADatos
             int result = 0;
             using (var bdContexto = new BDContexto())
             {
-                var usuario = await bdContexto.Usuarios.FirstOrDefaultAsync(s => s.Id == pUsuario.Id);
-                bdContexto.Usuarios.Remove(usuario);
+                var usuario = await bdContexto.Usuario.FirstOrDefaultAsync(s => s.Id == pUsuario.Id);
+                bdContexto.Usuario.Remove(usuario);
                 result = await bdContexto.SaveChangesAsync();
             }
             return result;
@@ -91,7 +91,7 @@ namespace ClinicaWeb.AccesoADatos
             var usuario = new Usuario();
             using (var bdContexto = new BDContexto())
             {
-                usuario = await bdContexto.Usuarios.FirstOrDefaultAsync(s => s.Id == pUsuario.Id);
+                usuario = await bdContexto.Usuario.FirstOrDefaultAsync(s => s.Id == pUsuario.Id);
             }
             return usuario;
         }
@@ -101,7 +101,7 @@ namespace ClinicaWeb.AccesoADatos
             var usuarios = new List<Usuario>();
             using (var bdContexto = new BDContexto())
             {
-                usuarios = await bdContexto.Usuarios.ToListAsync();
+                usuarios = await bdContexto.Usuario.ToListAsync();
             }
             return usuarios;
         }
@@ -110,7 +110,8 @@ namespace ClinicaWeb.AccesoADatos
         {
             if (pUsuario.Id > 0)
                 pQuery = pQuery.Where(s => s.Id == pUsuario.Id);
-       
+            if (pUsuario.IdRol > 0)
+                pQuery = pQuery.Where(s => s.IdRol == pUsuario.IdRol);
             if (!string.IsNullOrWhiteSpace(pUsuario.Nombre))
                 pQuery = pQuery.Where(s => s.Nombre.Contains(pUsuario.Nombre));
             if (!string.IsNullOrWhiteSpace(pUsuario.Apellido))
@@ -136,7 +137,7 @@ namespace ClinicaWeb.AccesoADatos
             var Usuarios = new List<Usuario>();
             using (var bdContexto = new BDContexto())
             {
-                var select = bdContexto.Usuarios.AsQueryable();
+                var select = bdContexto.Usuario.AsQueryable();
                 select = QuerySelect(select, pUsuario);
                 Usuarios = await select.ToListAsync();
             }
@@ -148,8 +149,8 @@ namespace ClinicaWeb.AccesoADatos
             var usuarios = new List<Usuario>();
             using (var bdContexto = new BDContexto())
             {
-                var select = bdContexto.Usuarios.AsQueryable();
-                
+                var select = bdContexto.Usuario.AsQueryable();
+                select = QuerySelect(select, pUsuario).Include(s => s.Rol).AsQueryable();
                 usuarios = await select.ToListAsync();
             }
             return usuarios;
@@ -161,7 +162,7 @@ namespace ClinicaWeb.AccesoADatos
             using (var bdContexto = new BDContexto())
             {
                 EncriptarMD5(pUsuario);
-                usuario = await bdContexto.Usuarios.FirstOrDefaultAsync(s => s.Login == pUsuario.Login &&
+                usuario = await bdContexto.Usuario.FirstOrDefaultAsync(s => s.Login == pUsuario.Login &&
                 s.Password == pUsuario.Password && s.Estatus == (byte)Estatus_Usuario.ACTIVO);
             }
             return usuario;
@@ -174,7 +175,7 @@ namespace ClinicaWeb.AccesoADatos
             EncriptarMD5(usuarioPassAnt);
             using (var bdContexto = new BDContexto())
             {
-                var usuario = await bdContexto.Usuarios.FirstOrDefaultAsync(s => s.Id == pUsuario.Id);
+                var usuario = await bdContexto.Usuario.FirstOrDefaultAsync(s => s.Id == pUsuario.Id);
                 if (usuarioPassAnt.Password == usuario.Password)
                 {
                     EncriptarMD5(pUsuario);

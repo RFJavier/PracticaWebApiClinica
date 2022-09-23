@@ -42,3 +42,18 @@ C:\Users\Alumno\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.LogicaDeNegocio\obj\Deb
 C:\Users\Alumno\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.LogicaDeNegocio\obj\Debug\netcoreapp3.1\ClinicaWeb.LogicaDeNegocio.csproj.CopyComplete
 C:\Users\Alumno\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.LogicaDeNegocio\obj\Debug\netcoreapp3.1\ClinicaWeb.LogicaDeNegocio.dll
 C:\Users\Alumno\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.LogicaDeNegocio\obj\Debug\netcoreapp3.1\ClinicaWeb.LogicaDeNegocio.pdb
+C:\Users\Javier Rivera\OneDrive\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.LogicaDeNegocio\bin\Debug\netcoreapp3.1\ClinicaWeb.LogicaDeNegocio.deps.json
+C:\Users\Javier Rivera\OneDrive\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.LogicaDeNegocio\bin\Debug\netcoreapp3.1\ClinicaWeb.LogicaDeNegocio.dll
+C:\Users\Javier Rivera\OneDrive\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.LogicaDeNegocio\bin\Debug\netcoreapp3.1\ClinicaWeb.LogicaDeNegocio.pdb
+C:\Users\Javier Rivera\OneDrive\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.LogicaDeNegocio\bin\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.dll
+C:\Users\Javier Rivera\OneDrive\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.LogicaDeNegocio\bin\Debug\netcoreapp3.1\ClinicaWeb.EntidadesDeNegocio.dll
+C:\Users\Javier Rivera\OneDrive\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.LogicaDeNegocio\bin\Debug\netcoreapp3.1\ClinicaWeb.AccesoADatos.pdb
+C:\Users\Javier Rivera\OneDrive\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.LogicaDeNegocio\bin\Debug\netcoreapp3.1\ClinicaWeb.EntidadesDeNegocio.pdb
+C:\Users\Javier Rivera\OneDrive\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.LogicaDeNegocio\obj\Debug\netcoreapp3.1\ClinicaWeb.LogicaDeNegocio.csproj.AssemblyReference.cache
+C:\Users\Javier Rivera\OneDrive\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.LogicaDeNegocio\obj\Debug\netcoreapp3.1\ClinicaWeb.LogicaDeNegocio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Javier Rivera\OneDrive\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.LogicaDeNegocio\obj\Debug\netcoreapp3.1\ClinicaWeb.LogicaDeNegocio.AssemblyInfoInputs.cache
+C:\Users\Javier Rivera\OneDrive\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.LogicaDeNegocio\obj\Debug\netcoreapp3.1\ClinicaWeb.LogicaDeNegocio.AssemblyInfo.cs
+C:\Users\Javier Rivera\OneDrive\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.LogicaDeNegocio\obj\Debug\netcoreapp3.1\ClinicaWeb.LogicaDeNegocio.csproj.CoreCompileInputs.cache
+C:\Users\Javier Rivera\OneDrive\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.LogicaDeNegocio\obj\Debug\netcoreapp3.1\ClinicaWeb.LogicaDeNegocio.csproj.CopyComplete
+C:\Users\Javier Rivera\OneDrive\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.LogicaDeNegocio\obj\Debug\netcoreapp3.1\ClinicaWeb.LogicaDeNegocio.dll
+C:\Users\Javier Rivera\OneDrive\Desktop\ClinicaWeb\ClinicaWeb\ClinicaWeb.LogicaDeNegocio\obj\Debug\netcoreapp3.1\ClinicaWeb.LogicaDeNegocio.pdb

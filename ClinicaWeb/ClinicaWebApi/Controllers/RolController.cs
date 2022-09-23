@@ -8,35 +8,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
+
+
 namespace ClinicaWebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
-    public class Anexoscontroller : ControllerBase
+    public class RolController : ControllerBase
     {
-        private AnexosBL anexosBL = new AnexosBL();
+        private RolBL RolBL = new RolBL();
 
         [HttpGet]
-        public async Task<IEnumerable<Anexos>> Get()
+        public async Task<IEnumerable<Rol>> Get()
         {
-            return await anexosBL.ObtenerTodosAsync();
+            return await RolBL.ObtenerTodosAsync();
         }
 
         [HttpGet("id")]
-        public async Task<Anexos> Get(int id)
+        public async Task<Rol> Get(int id)
         {
-            Anexos anexos = new Anexos();
-            anexos.Id = id;
-            return await anexosBL.ObtenerPorId(anexos);
+            Rol rol = new Rol();
+            rol.Id = id;
+            return await rol.ObtenerPorIdAsync(id);
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] Anexos anexos)
+        public async Task<ActionResult> Post([FromBody] Rol rol)
         {
             try
             {
-                await anexosBL.CrearAsync(anexos);
+                await RolBL.CrearAsync(rol);
                 return Ok();
             }
             catch (Exception)
@@ -46,11 +47,12 @@ namespace ClinicaWebApi.Controllers
         }
 
         [HttpPut("id")]
-        public async Task<ActionResult> Put(int id, [FromBody] Anexos anexos)
+        public async Task<ActionResult> Put(int id, [FromBody] Rol rol
+            )
         {
-            if (anexos.Id == id)
+            if (rol.Id == id)
             {
-                await anexosBL.ModificarAsync(anexos);
+                await RolBL.ModificarAsync(rol);
                 return Ok();
             }
             else
@@ -64,9 +66,9 @@ namespace ClinicaWebApi.Controllers
         {
             try
             {
-                Anexos anexos = new Anexos();
-                anexos.Id = id;
-                await anexosBL.EliminarAsync(anexos);
+                Rol rol = new Rol();
+                rol.Id = id;
+                await RolBL.EliminarAsync(rol);
                 return Ok();
             }
             catch (Exception)
@@ -76,14 +78,13 @@ namespace ClinicaWebApi.Controllers
         }
 
         [HttpPost("Buscar")]
-        public async Task<List<Anexos>> Buscar([FromBody] object pAnexos)
+        public async Task<List<Rol>> Buscar([FromBody] object pMedico)
         {
             var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-            string strAnexos = JsonSerializer.Serialize(pAnexos);
-            Anexos anexos = JsonSerializer.Deserialize<Anexos>(strAnexos, option);
-            return await anexosBL.BuscarAsync(anexos);
+            string strMedico = JsonSerializer.Serialize(pMedico);
+            Rol medico = JsonSerializer.Deserialize<Rol>(strMedico, option);
+            return await RolBL.BuscarAsync(medico);
 
         }
-
     }
 }

@@ -15,11 +15,12 @@ namespace ClinicaWeb.AccesoADatos
         public DbSet<Anexos> Anexos { get; set; }
         public DbSet<Horarios> Horarios { get; set; }
         public DbSet<Paciente> Paciente { get; set; }
-        public DbSet<Usuario> Usuarios { get; internal set; }
+        public DbSet<Usuario> Usuario { get; internal set; }
+        public DbSet<Rol> Rol { get; internal set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source = DESKTOP-HEBUK74; Initial Catalog = ClinicaWebDB; Integrated Security = True");
+            optionsBuilder.UseSqlServer("Data Source=LAPTOP-7QDEK088;Initial Catalog=ClinicaWebDB;Integrated Security=True");
         }
     }
 }
