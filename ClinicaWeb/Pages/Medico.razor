@@ -1,0 +1,42 @@
+﻿@page "/medico"
+
+<center><h3>Lista de Medicos</h3></center>
+
+
+<MudButton Variant="Variant.Filled" Color="Color.Primary">Agregar Medicos</MudButton>
+<br />
+<br />
+<br />
+<br />
+<MudSimpleTable Style="overflow-x: auto;">
+    <thead>
+        <tr>
+            @foreach (var h in headings)
+            {
+                <th>@h</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var row in rows)
+        {
+            <tr>
+                @foreach (var x in row.Split())
+                {
+                    <td>@x</td>
+                }
+            </tr>
+        }
+    </tbody>
+</MudSimpleTable>
+@code {
+    string[] headings = { "ID", "Medico", "Especialidad" };
+    string[] rows = {
+        @"1 Nohemy_Chinque Cardiologo",
+        @"2 Luisa_Enriquez Pediatra",
+        @"3 Jessica_Perez Internista",
+        @"4 Juan_Mestizo Pediatra",
+        @"5 Jorge_Salazar General",
+        @"6 Soraya_Cristal Nutricionista",
+    };
+}

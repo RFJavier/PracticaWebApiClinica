@@ -1,0 +1,39 @@
+﻿@page "/rol"
+
+<center><h3>Lista de Roles</h3></center>
+
+<MudButton Variant="Variant.Filled" Color="Color.Primary">Agregar Medicos</MudButton>
+<br />
+<br />
+<br />
+<br />
+<MudSimpleTable Style="overflow-x: auto;">
+    <thead>
+        <tr>
+            @foreach (var h in headings)
+            {
+                <th>@h</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var row in rows)
+        {
+            <tr>
+                @foreach (var x in row.Split())
+                {
+                    <td>@x</td>
+                }
+            </tr>
+        }
+    </tbody>
+</MudSimpleTable>
+@code {
+    string[] headings = { "ID", "Rol" };
+    string[] rows = {
+        @"1 admin",
+        @"2 editor",
+        @"3 usuario",
+        @"4 visitante",
+    };
+}

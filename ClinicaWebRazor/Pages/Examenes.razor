@@ -1,0 +1,42 @@
+﻿@page "/examenes"
+
+<h3>Examenes</h3>
+
+
+<MudButton Variant="Variant.Filled" Color="Color.Primary">Agregar Examenes</MudButton>
+<br />
+<br />
+<br />
+<br />
+<MudSimpleTable Style="overflow-x: auto;">
+    <thead>
+        <tr>
+            @foreach (var h in headings)
+            {
+                <th>@h</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var row in rows)
+        {
+            <tr>
+                @foreach (var x in row.Split())
+                {
+                    <td>@x</td>
+                }
+            </tr>
+        }
+    </tbody>
+</MudSimpleTable>
+@code {
+    string[] headings = { "ID", "Examenes", };
+    string[] rows = {
+        @"1  ",
+        @"2   ",
+        @"3  ",
+        @"4   ",
+        @"5  ",
+        @"6  ",
+    };
+}

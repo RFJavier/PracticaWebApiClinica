@@ -1,0 +1,39 @@
+﻿@page "/anexos"
+
+<center><h3>Agregar Anexos</h3></center>
+
+<MudButton Variant="Variant.Filled" Color="Color.Primary">Agregar Anexos</MudButton>
+<br />
+<br />
+<MudSimpleTable Style="overflow-x: auto;">
+    <thead>
+        <tr>
+            @foreach (var h in headings)
+            {
+                <th>@h</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var row in rows)
+        {
+            <tr>
+                @foreach (var x in row.Split())
+                {
+                    <td>@x</td>
+                }
+            </tr>
+        }
+    </tbody>
+</MudSimpleTable>
+@code {
+    string[] headings = { "ID", "Anexo", "Descripcion",};
+    string[] rows = {
+        @"1 Krishna -----------------------",
+        @"2 Webb ------------------------ ",
+        @"3 Nathanil ----------------------------",
+        @"4 Adara ------------------------------ ",
+        @"5 Cecilius ----------------------- ",
+        @"6 Cicely ---------------------- ",
+    };
+}
