@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace ClinicaWebApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[Controller]")]
     [ApiController]
     public class Pacientecontroller : ControllerBase
     {

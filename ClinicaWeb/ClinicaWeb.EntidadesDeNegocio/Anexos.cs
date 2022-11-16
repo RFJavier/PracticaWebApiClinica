@@ -12,6 +12,7 @@ namespace ClinicaWeb.EntidadesDeNegocio
     {
         [Key]
         public int Id { get; set; }
+        
 
         [Required(ErrorMessage = "Anexo es Obligatorio")]
         [StringLength(1500, ErrorMessage = "Maximo de 1500 Caracteres")]

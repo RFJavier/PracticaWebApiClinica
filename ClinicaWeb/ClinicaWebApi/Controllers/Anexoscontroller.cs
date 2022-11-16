@@ -12,7 +12,7 @@ namespace ClinicaWebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    
     public class Anexoscontroller : ControllerBase
     {
         private AnexosBL anexosBL = new AnexosBL();

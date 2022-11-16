@@ -49,6 +49,28 @@ CONSTRAINT FK2_Examenes_Paciente FOREIGN KEY (IdExamen) REFERENCES Examenes (Id)
 CONSTRAINT FK3_Anexos_Paciente FOREIGN KEY (IdAnexo) REFERENCES Anexos (Id)
 )
 
+--Tabla rol
+CREATE TABLE [dbo].[Rol](
+[Id] [int] PRIMARY KEY IDENTITY (1,1) NOT NULL,
+[Nombre] [varchar] (30) NOT NULL,
+CONSTRAINT FK1_Usuario_Rol FOREIGN KEY (Id) REFERENCES Rol (Id)
+);
+go
+
+--Tabla usuario 
+CREATE TABLE[dbo].[Usuario](
+[Id] [int] PRIMARY KEY IDENTITY (1,1) NOT NULL,
+[IdRol][int] NOT NULL,
+[Nombre] [varchar] (30) NOT NULL,
+[Apellido] [varchar] (30) NOT NULL,
+[Login] [varchar] (25) NOT NULL,
+[Password] [varchar] (32) NOT NULL,
+[Estatus] [tinyint] NOT NULL,
+[FechaRegistro] [datetime] NOT NULL,
+CONSTRAINT FK1_Rol_Usuario FOREIGN KEY (Id) REFERENCES Usuario (Id)
+);
+go
+
 
 
 USE [ClinicaWebDB]
@@ -71,3 +93,32 @@ INSERT INTO [dbo].[Examenes]
 VALUES
 ('Examen de Sangre')
 GO
+
+INSERT INTO [dbo].[Paciente]
+
+           ([IdMedico],[IdExamen],[IdAnexo],[Fechanacimiento] )
+VALUES 
+ ('','','','Pedro Alvarez','Examen de Orin','Recibir Consulta Mensual','Juan Pedro','25','79856142','12/02/2020')
+ go
+
+ INSERT INTO [dbo].[Horarios]
+ ([IdMedico],[Entrada],[Salida])
+
+ VALUES
+ ('Juan Antonio','10.00 am','5:30 Pm')
+ go
+
+ INSERT INTO [dbo].[Rol]
+
+([Nombre])
+VALUES
+('Javier Monge')
+go
+
+INSERT INTO [dbo].[Usuario]
+([IdRol],[Nombre],[Apellido],[Login],[Password],[Estatus],[FechaRegistro])
+
+VALUES
+('','Kevin alexander','Perez Hernandez','Kevin Perez','T028964','1','28/10/2022')
+go
+

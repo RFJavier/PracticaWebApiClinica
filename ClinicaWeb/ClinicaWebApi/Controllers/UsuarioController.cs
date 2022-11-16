@@ -12,9 +12,10 @@ using System.Threading.Tasks;
 
 namespace ClinicaWebApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[Controller]")]
     [ApiController]
     [Authorize]
+    [AllowAnonymous]
     public class UsuarioController : ControllerBase
     {
         private UsuarioBL usuarioBL = new UsuarioBL();
@@ -27,15 +28,15 @@ namespace ClinicaWebApi.Controllers
         }
         //************************************************
 
-   
-
         [HttpGet]
+        
         public async Task<IEnumerable<Usuario>> Get()
         {
             return await usuarioBL.ObtenerTodosAsync();
         }
 
-        [HttpGet("id")]
+        [HttpGet("{Id}")]
+        
         public async Task<Usuario> Get(int id)
         {
             Usuario usuario = new Usuario();
@@ -57,9 +58,12 @@ namespace ClinicaWebApi.Controllers
             }
         }
 
-        [HttpPut("id")]
-        public async Task<ActionResult> Put(int id, [FromBody] Usuario usuario)
+        [HttpPut("{Id}")]
+        public async Task<ActionResult> Put(int id, [FromBody] object pUsuario)
         {
+            var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+            string strUsuario = JsonSerializer.Serialize(pUsuario);
+            Usuario usuario = JsonSerializer.Deserialize<Usuario>(strUsuario, option);
             if (usuario.Id == id)
             {
                 await usuarioBL.ModificarAsync(usuario);
@@ -71,7 +75,7 @@ namespace ClinicaWebApi.Controllers
             }
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{Id}")]
         public async Task<ActionResult> Delete(int id)
         {
             try
@@ -90,11 +94,13 @@ namespace ClinicaWebApi.Controllers
         [HttpPost("Buscar")]
         public async Task<List<Usuario>> Buscar([FromBody] object pUsuario)
         {
+
             var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
             string strUsuario = JsonSerializer.Serialize(pUsuario);
             Usuario usuario = JsonSerializer.Deserialize<Usuario>(strUsuario, option);
-            return await usuarioBL.BuscarAsync(usuario);
-
+            var usuarios = await usuarioBL.BuscarIncluirRolesAsync(usuario);
+            usuarios.ForEach(s => s.Rol.Usuario = null); // Evitar la redundacia de datos
+            return usuarios;
         }
 
         [HttpPost("Login")]

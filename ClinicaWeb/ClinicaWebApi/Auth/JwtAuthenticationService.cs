@@ -19,7 +19,7 @@ namespace ClinicaWebApi.Auth
             _key = key;
         }
 
-        public string Authenticate(Usuario pusuario)
+        public string Authenticate(Usuario pUsuario)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var tokenKey = Encoding.ASCII.GetBytes(_key);
@@ -27,7 +27,7 @@ namespace ClinicaWebApi.Auth
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {
-                    new Claim(ClaimTypes.Name, pusuario.Login)
+                    new Claim(ClaimTypes.Name, pUsuario.Login)
                 }),
                 Expires = DateTime.UtcNow.AddHours(8),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(tokenKey), SecurityAlgorithms.HmacSha256Signature)

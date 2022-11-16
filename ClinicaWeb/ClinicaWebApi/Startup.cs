@@ -30,11 +30,12 @@ namespace ClinicaWebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors();
-            services.AddControllers();
+            services.AddCors(); // habilitar los cors
+
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ClinicaWebApi", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "DeptosES.WebAPI", Version = "v1" });
+
                 // *** Incluir  JWT Authentication ***
                 var jwtSecurityScheme = new OpenApiSecurityScheme
                 {
@@ -54,7 +55,6 @@ namespace ClinicaWebApi
                 c.AddSecurityDefinition(jwtSecurityScheme.Reference.Id, jwtSecurityScheme);
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement { { jwtSecurityScheme, Array.Empty<string>() } });
                 // ******************************************
-
             });
 
             // *** Reducir el tamaño del JSON quitando las propiedades nulas o con valores por defecto ***
@@ -92,7 +92,7 @@ namespace ClinicaWebApi
              });
 
             // Aplicar la inyeccion de dependencia para JWT
-            services.AddSingleton<IautenticacionService>(new JwtAuthenticationService(key));
+            services.AddSingleton<JwtAuthenticationService>(new JwtAuthenticationService(key));
             #endregion
         }
 
@@ -112,14 +112,14 @@ namespace ClinicaWebApi
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Clinica.ClinicaWebApi v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "DeptosES.WebAPI v1"));
             }
 
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
-            app.UseAuthentication();
+            app.UseAuthentication(); //agregar la autenticación
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
