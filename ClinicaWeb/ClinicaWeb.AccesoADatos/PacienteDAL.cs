@@ -122,13 +122,13 @@ namespace ClinicaWeb.AccesoADatos
             return paciente;
         }
 
-        public static async Task<List<Paciente>> BuscarIncluirAnexoAsync(Paciente pPaciente)
+        public static async Task<List<Paciente>> BuscarIncluirTodoAsync(Paciente pPaciente)
         {
             var paciente = new List<Paciente>();
             using (var bdContexto = new BDContexto())
             {
                 var select = bdContexto.Paciente.AsQueryable();
-                select = QuerySelect(select, pPaciente).Include(a => a.Anexos).AsQueryable();
+                select = QuerySelect(select, pPaciente).Include(a => a.Anexos).AsQueryable().Include(a => a.Examenes).AsQueryable().Include(a => a.Medico).AsQueryable();
                 paciente = await select.ToListAsync();
             }
             return paciente;

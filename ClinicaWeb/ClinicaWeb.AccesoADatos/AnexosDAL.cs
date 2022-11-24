@@ -15,7 +15,7 @@ namespace ClinicaWeb.AccesoADatos
         public static async Task<int> CrearAsync(Anexos pAnexo)
         {
             int result = 0;
-            using (var bdContexto = new BDContexto())
+            using(var bdContexto = new BDContexto())
             {
                 bdContexto.Add(pAnexo);
                 result = await bdContexto.SaveChangesAsync();

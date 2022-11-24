@@ -24,7 +24,7 @@ namespace ClinicaWebApi.Controllers
             return await RolBL.ObtenerTodosAsync();
         }
 
-        [HttpGet("id")]
+        [HttpGet("{id}")]
         public async Task<Rol> Get(int id)
         {
             Rol rol = new Rol();
@@ -46,7 +46,7 @@ namespace ClinicaWebApi.Controllers
             }
         }
 
-        [HttpPut("id")]
+        [HttpPut("{id}")]
         public async Task<ActionResult> Put(int id, [FromBody] Rol rol
             )
         {

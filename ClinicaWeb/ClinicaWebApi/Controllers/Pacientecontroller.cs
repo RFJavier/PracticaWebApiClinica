@@ -1,4 +1,5 @@
-﻿using ClinicaWeb.EntidadesDeNegocio;
+﻿using ClinicaWeb.AccesoADatos;
+using ClinicaWeb.EntidadesDeNegocio;
 using ClinicaWeb.LogicaDeNegocio;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -23,7 +24,7 @@ namespace ClinicaWebApi.Controllers
             return await pacienteBL.ObtenerTodosAsync();
         }
 
-        [HttpGet("id")]
+        [HttpGet("{id}")]
         public async Task<Paciente> Get(int id)
         {
             Paciente paciente = new Paciente();
@@ -45,7 +46,7 @@ namespace ClinicaWebApi.Controllers
             }
         }
 
-        [HttpPut("id")]
+        [HttpPut("{id}")]
         public async Task<ActionResult> Put(int id, [FromBody] Paciente paciente)
         {
             if (paciente.Id == id)
@@ -80,8 +81,12 @@ namespace ClinicaWebApi.Controllers
         {
             var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
             string strPaciente = JsonSerializer.Serialize(pPaciente);
-            Paciente paciente = JsonSerializer.Deserialize<Paciente>(strPaciente, option);
-            return await pacienteBL.BuscarAsync(paciente);
+            Paciente pacientes = JsonSerializer.Deserialize<Paciente>(strPaciente, option);
+            var paciente = await pacienteBL.BuscarIncluirTodoAsync(pacientes);
+            paciente.ForEach(s => s.Anexos.Paciente = null);
+            paciente.ForEach(s => s.Examenes.Paciente = null);
+            paciente.ForEach(s => s.Medico.Paciente = null);
+            return paciente;
 
         }
     }

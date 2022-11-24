@@ -42,17 +42,11 @@ namespace ClinicaWeb.LogicaDeNegocio
             return await PacienteDAL.BuscarAsync(pPaciente);
         }
 
-        public async Task<List<Paciente>> BuscarIncluirMedicoAsync(Paciente pPaciente)
+        
+        public async Task<List<Paciente>> BuscarIncluirTodoAsync(Paciente pPaciente)
         {
-            return await PacienteDAL.BuscarIncluirMedicoAsync(pPaciente);
+            return await PacienteDAL.BuscarIncluirTodoAsync(pPaciente);
         }
-        public async Task<List<Paciente>> BuscarIncluirAnexoAsync(Paciente pPaciente)
-        {
-            return await PacienteDAL.BuscarIncluirAnexoAsync(pPaciente);
-        }
-        public async Task<List<Paciente>> BuscarIncluirExamenAsync(Paciente pPaciente)
-        {
-            return await PacienteDAL.BuscarIncluirExamenAsync(pPaciente);
-        }
+       
     }
 }

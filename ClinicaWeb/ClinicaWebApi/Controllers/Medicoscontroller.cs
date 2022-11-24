@@ -24,7 +24,7 @@ namespace ClinicaWebApi.Controllers
             return await medicoBL.ObtenerTodosAsync();
         }
 
-        [HttpGet("id")]
+        [HttpGet("{id}")]
         public async Task<Medico> Get(int id)
         {
             Medico medico = new Medico();
@@ -46,7 +46,7 @@ namespace ClinicaWebApi.Controllers
             }
         }
 
-        [HttpPut("id")]
+        [HttpPut("{id}")]
         public async Task<ActionResult> Put(int id, [FromBody] Medico medico)
         {
             if (medico.Id == id)

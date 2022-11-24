@@ -23,7 +23,7 @@ namespace ClinicaWebApi.Controllers
             return await anexosBL.ObtenerTodosAsync();
         }
 
-        [HttpGet("id")]
+        [HttpGet("{id}")]
         public async Task<Anexos> Get(int id)
         {
             Anexos anexos = new Anexos();
@@ -45,7 +45,7 @@ namespace ClinicaWebApi.Controllers
             }
         }
 
-        [HttpPut("id")]
+        [HttpPut("{id}")]
         public async Task<ActionResult> Put(int id, [FromBody] Anexos anexos)
         {
             if (anexos.Id == id)

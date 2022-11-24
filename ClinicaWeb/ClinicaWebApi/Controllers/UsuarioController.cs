@@ -35,7 +35,7 @@ namespace ClinicaWebApi.Controllers
             return await usuarioBL.ObtenerTodosAsync();
         }
 
-        [HttpGet("{Id}")]
+        [HttpGet("{id}")]
         
         public async Task<Usuario> Get(int id)
         {
@@ -58,7 +58,7 @@ namespace ClinicaWebApi.Controllers
             }
         }
 
-        [HttpPut("{Id}")]
+        [HttpPut("{id}")]
         public async Task<ActionResult> Put(int id, [FromBody] object pUsuario)
         {
             var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
@@ -75,7 +75,7 @@ namespace ClinicaWebApi.Controllers
             }
         }
 
-        [HttpDelete("{Id}")]
+        [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
             try

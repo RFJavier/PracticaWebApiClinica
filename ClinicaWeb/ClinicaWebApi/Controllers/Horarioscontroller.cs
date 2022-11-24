@@ -24,7 +24,7 @@ namespace ClinicaWebApi.Controllers
             return await horariosBL.ObtenerTodosAsync();
         }
 
-        [HttpGet("id")]
+        [HttpGet("{id}")]
         public async Task<Horarios> Get(int id)
         {
             Horarios horarios = new Horarios();
@@ -46,7 +46,7 @@ namespace ClinicaWebApi.Controllers
             }
         }
 
-        [HttpPut("id")]
+        [HttpPut("{id}")]
         public async Task<ActionResult> Put(int id, [FromBody] Horarios horarios)
         {
             if (horarios.Id == id)
@@ -82,7 +82,10 @@ namespace ClinicaWebApi.Controllers
             var option = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
             string strHorarios = JsonSerializer.Serialize(pHorarios);
             Horarios horarios = JsonSerializer.Deserialize<Horarios>(strHorarios, option);
-            return await horariosBL.BuscarAsync(horarios);
+            var horario = await horariosBL.BuscarIncluirMedicosAsync(horarios);
+            horario.ForEach(s => s.Medico.Horarios = null);
+
+                return horario;
 
         }
     }
